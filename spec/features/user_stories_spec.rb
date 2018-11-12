@@ -49,18 +49,18 @@ describe 'user_stories' do
     expect(my_menu.calculate).to eq(total)
   end
 
-  # it 'sends me a message to tell me when my order will arrive' do
-  #   # As a customer So that I am reassured that my order will be delivered
-  #   # on time I would like to receive a text such as "Thank you! Your order
-  #   # was placed and will be delivered before 18:52" after I have ordered
-  #
-  #   account_sid = "*******************************"
-  #   auth_token = "********************************"
-  #
-  #   @client = Twilio::REST::Client.new account_sid, auth_token
-  #   message = @client.messages.create(
-  #       body: "Thank You! Your order has been placed!",
-  #       to:   "+444573910384",
-  #       from: "+443450924051")
-  #   end
+  it 'sends me a message to tell me when my order will arrive' do
+    # As a customer So that I am reassured that my order will be delivered
+    # on time I would like to receive a text such as "Thank you! Your order
+    # was placed and will be delivered before 18:52" after I have ordered
+
+    account_sid = "*******************************"
+    auth_token = "********************************"
+
+    @client = Twilio::REST::Client.new account_sid, auth_token
+    message = @client.messages.create(
+        body: "Thank You! Your order has been placed!",
+        to:   "+444573910384",
+        from: "+443450924051")
+    end
   end
