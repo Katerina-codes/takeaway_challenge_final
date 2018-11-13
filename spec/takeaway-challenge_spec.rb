@@ -35,7 +35,7 @@ describe Menu do
     let(:send_sms) { double('fake sms') }
 
     it 'sends sms confirmation of order' do
-      allow(send_sms).to receive(:sms).and_return(true)
+      allow(send_sms).to receive(:message).and_return(true)
     end
   end
 
